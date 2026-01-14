@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="King Jesus Ministry Kenya – Encountering the power of King Jesus in Makhonge through worship, prayer, and the Word."/>
+  <title>King Jesus Ministry Kenya – Welcome</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.7;
+      color: #1f2937;
+      background: #f9fafb;
+    }
+
+    header {
+      background: #0f172a;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+      padding: 1.2rem 5%;
+    }
+
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center; /* Center everything horizontally */
+      align-items: center;
+      flex-direction: column; /* Stack logo and nav vertically on all screens for better centering */
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 6vw, 3.8rem); /* Much larger and responsive */
+      font-weight: 800; /* Extra bold for impact */
+      color: #60a5fa;
+      text-align: center;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 10px rgba(96,165,250,0.4); /* Subtle glow */
+      margin: 0.5rem 0;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.6rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0.5rem 0 0;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: #60a5fa;
+    }
+
+    /* Formal Top Bar with Logo Image + Address */
+    .top-formal {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1.8rem 5%;
+      text-align: center;
+    }
+
+    .formal-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .church-logo {
+      max-width: clamp(180px, 25vw, 280px);
+      height: auto;
+      margin-bottom: 1.2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .address {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      color: #1e3a8a;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65)),
+                  url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80') center/cover no-repeat fixed;
+      color: white;
+      text-align: center;
+      padding: clamp(9rem, 22vw, 15rem) 5% 8rem;
+    }
+
+    .hero-content {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 9vw, 5.8rem);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    .lead {
+      font-size: clamp(1.3rem, 4vw, 1.8rem);
+      max-width: 780px;
+      margin: 0 auto 1.5rem;
+      opacity: 0.96;
+    }
+
+    .welcome-message {
+      font-size: clamp(1.15rem, 3.5vw, 1.45rem);
+      max-width: 840px;
+      margin: 0 auto 2.8rem;
+      font-style: italic;
+      line-height: 1.8;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: clamp(1rem, 3vw, 1.3rem) clamp(2rem, 5vw, 3rem);
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: clamp(1.1rem, 3vw, 1.3rem);
+    }
+
+    .btn-primary {
+      background: #3b82f6;
+      color: white;
+      border: 2px solid #3b82f6;
+    }
+
+    .btn-primary:hover {
+      background: #2563eb;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(59,130,246,0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      margin: 1rem 0.8rem 0;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #1e40af;
+    }
+
+    /* Sections */
+    .section {
+      padding: clamp(5rem, 12vw, 8rem) 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 3.4rem);
+      text-align: center;
+      color: #1e3a8a;
+      margin-bottom: 3rem;
+    }
+
+    .faith {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      padding: 4rem 6%;
+      text-align: center;
+    }
+
+    .faith p {
+      font-size: clamp(1.05rem, 3vw, 1.25rem);
+      max-width: 840px;
+      margin: 1.6rem auto;
+      color: #4b5563;
+    }
+
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .location-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.09);
+      transition: all 0.35s ease;
+    }
+
+    .location-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.14);
+    }
+
+    .location-header {
+      background: #1e40af;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.65rem;
+      font-weight: 700;
+    }
+
+    .location-body {
+      padding: 2.2rem;
+      text-align: center;
+    }
+
+    .location-body p {
+      margin: 1rem 0;
+      font-size: 1.15rem;
+      color: #4b5563;
+    }
+
+    /* CTA */
+    .cta {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: clamp(6rem, 15vw, 9rem) 5%;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 6rem 5% 3rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 3.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-column h4 {
+      color: white;
+      font-size: 1.4rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .footer-column a {
+      color: #94a3b8;
+      text-decoration: none;
+      display: block;
+      line-height: 2.2;
+    }
+
+    .footer-column a:hover { color: #60a5fa; }
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      background: #1e293b;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e2e8f0;
+      font-size: 1.6rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      background: #3b82f6;
+      color: white;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(59,130,246,0.4);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid #334155;
+      font-size: 0.98rem;
+      color: #64748b;
+    }
+
+    .footer-bottom a { color: #94a3b8; }
+
+    /* Enhanced Responsiveness */
+    @media (max-width: 900px) {
+      .header-inner { flex-direction: column; text-align: center; }
+      nav ul { gap: 1.2rem; }
+      .hero { padding: 10rem 5% 6rem; }
+      .btn { padding: 1rem 2rem; font-size: 1.05rem; }
+      .top-formal { padding: 1.2rem 5%; }
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 8rem 5% 5rem; }
+      .hero h1 { font-size: 3rem; }
+      .lead { font-size: 1.35rem; }
+      .welcome-message { font-size: 1.15rem; }
+      .section { padding: 5rem 5%; }
+      h2 { font-size: 2.5rem; }
+      .locations-grid { grid-template-columns: 1fr; }
+      .cta-buttons { flex-direction: column; gap: 1.2rem; }
+      .social-icons { justify-content: center; }
+      .church-logo { max-width: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">King Jesus Ministry Kenya</div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="live-streaming.html">Live Streaming</a></li>
+        <li><a href="donations.html">Donations</a></li>
+        <li><a href="prayer.html">Prayer</a></li>
+        <li><a href="announcements.html">Announcements</a></li>
+        <li><a href="sermon.html">Sermons</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Formal Top Section with Church Logo Image + Address -->
+<section class="top-formal">
+  <div class="formal-inner">
+    <!-- Replace src with your actual logo file -->
+    <img src="pic.png" alt="King Jesus Ministry Kenya Logo" class="church-logo">
+    <div class="address">
+      P.O. BOX 99149-80107<br>
+      MOMBASA, KENYA
+    </div>
+  </div>
+</section>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to King Jesus Ministry Kenya</h1>
+      <p class="lead">Exalting King Jesus • Transforming lives in Makhonge through powerful worship, anointed teaching, and fervent prayer.</p>
+      
+      <!-- Warm welcoming message -->
+      <p class="welcome-message">
+        Beloved friend, welcome home! Whether this is your first step through our virtual doors or you've walked with us for years, we are overjoyed that the Lord has brought you here today. This is more than a church—it's a family where broken hearts are mended, dry places are refreshed, and ordinary lives encounter the extraordinary King of glory. Come as you are; the Father is waiting with open arms, and we are waiting with open hearts. Let’s fellowship, worship, and grow together in the presence of Jesus—your miracle, your breakthrough, your next chapter might just begin right here.
+      </p>
+
+      <div>
+        <a href="live-streaming.html" class="btn btn-primary">Join Live →</a>
+        <a href="contact.html" class="btn btn-outline">Visit Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faith">
+    <h2>Our Statement of Faith</h2>
+    <p>We believe in one triune God – Father, Son, and Holy Spirit. Jesus Christ is Lord, King, and Savior. Salvation comes by grace through faith in Him alone.</p>
+    <p>The Bible is the inspired, infallible Word of God. We pursue revival, healing, deliverance, and the Great Commission in the power of the Holy Spirit.</p>
+  </section>
+
+  <section class="section">
+    <h2>Our Location</h2>
+    <div class="locations-grid">
+      <div class="location-card">
+        <div class="location-header">Makhonge</div>
+        <div class="location-body">
+          <p>King Jesus Ministry Kenya</p>
+          <p><strong>Main Services:</strong> Sundays 9:00 AM</p>
+          <p><strong>Prayer & Bible Study:</strong> Saturdays 9:00 AM</p>
+          <p>All are welcome to encounter the King!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>You Are Welcome in His Presence</h2>
+    <p>Join a family where chains break, hearts heal, and destinies are fulfilled under the reign of King Jesus.</p>
+    <div class="cta-buttons">
+      <a href="live-streaming.html" class="btn btn-outline">Watch Live Services</a>
+      <a href="contact.html" class="btn btn-primary">Connect With Us</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-column">
+      <div class="logo" style="color:white; margin-bottom:1.2rem; font-size:2.1rem;">King Jesus Ministry Kenya</div>
+      <p>Exalting King Jesus • Transforming Lives • Makhonge, Kenya</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <a href="#">Home</a>
+      <a href="live-streaming.html">Live Streaming</a>
+      <a href="donations.html">Donations</a>
+      <a href="prayer.html">Prayer</a>
+      <a href="announcements.html">Announcements</a>
+      <a href="sermon.html">Sermons</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p><strong>Makhonge</strong></p>
+      <p>Call/WhatsApp: <strong>0757880743</strong></p>
+      <p>WhatsApp (alternative): <strong>0791085514</strong></p>
+      <p>info@kingjesusministrykenya.org</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/mwakosi" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@charlesmwanda2212" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/254791085514" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 King Jesus Ministry Kenya. All rights reserved.</p>
+    <p><small>Made with faith and love • <a href="#">Privacy Policy</a> • <a href="#">Terms</a></small></p>
+  </div>
+</footer>
+
+</body>
+</html>

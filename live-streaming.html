@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="King Jesus TV – Live anointed worship, preaching, and encounters from King Jesus Ministry Kenya. Watch on YouTube, Facebook, or TikTok Live."/>
+  <title>King Jesus TV – Live Streaming | King Jesus Ministry Kenya</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; color: #1f2937; background: #f9fafb; }
+
+    header { background: #0f172a; color: white; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 14px rgba(0,0,0,0.12); padding: 1rem 5%; }
+    .header-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .logo { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 2.4rem); font-weight: 700; color: #60a5fa; }
+    nav ul { display: flex; list-style: none; gap: 1.8rem; flex-wrap: wrap; justify-content: center; margin: 0; }
+    nav a { color: #cbd5e1; text-decoration: none; font-weight: 500; font-size: clamp(0.95rem, 3vw, 1.08rem); transition: color 0.3s ease; }
+    nav a:hover, nav a.active { color: #60a5fa; }
+
+    .hero { 
+      background: linear-gradient(rgba(30, 58, 138, 0.70), rgba(30, 58, 138, 0.70)), 
+                  url('https://thumbs.dreamstime.com/b/worshippers-raise-their-hands-praise-gathering-under-bright-lights-cross-background-crowd-worshippers-416521140.jpg') center/cover no-repeat fixed; 
+      color: white; text-align: center; padding: clamp(10rem, 25vw, 16rem) 5% 9rem; 
+    }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3.2rem, 9vw, 5.8rem); margin-bottom: 1.2rem; text-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+    .hero .subtitle { font-size: clamp(1.4rem, 4.5vw, 1.9rem); margin-bottom: 2rem; }
+    .live-indicator { display: inline-flex; align-items: center; background: #ef4444; color: white; padding: 0.7rem 1.6rem; border-radius: 50px; font-weight: 600; margin-bottom: 1.5rem; box-shadow: 0 0 25px rgba(239,68,68,0.7); animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(239,68,68,0.7); } 70% { box-shadow: 0 0 0 20px rgba(239,68,68,0); } 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0); } }
+
+    .platforms { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin: 2rem 0; }
+    .platform-btn { padding: 0.8rem 1.8rem; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.3s; border: 2px solid #3b82f6; background: transparent; color: #3b82f6; }
+    .platform-btn.active, .platform-btn:hover { background: #3b82f6; color: white; }
+
+    .video-section { background: #0f172a; color: white; padding: 5rem 5% 7rem; text-align: center; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .schedule { padding: 6rem 5%; background: white; }
+    .schedule-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 3rem auto 0; }
+    .schedule-item { background: #f1f5f9; border-radius: 16px; padding: 2rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.06); transition: all 0.3s ease; }
+    .schedule-item:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.12); }
+    .schedule-icon { font-size: 3.2rem; color: #3b82f6; margin-bottom: 1.2rem; }
+    .schedule h3 { font-size: 1.6rem; margin-bottom: 1rem; color: #1e3a8a; }
+
+    .cta { background: #1e3a8a; color: white; text-align: center; padding: clamp(6rem, 15vw, 9rem) 5%; }
+    .cta-buttons { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2.5rem; }
+    .btn { display: inline-block; padding: clamp(0.9rem, 3vw, 1.15rem) clamp(1.8rem, 5vw, 2.6rem); border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; font-size: clamp(1rem, 3vw, 1.15rem); }
+    .btn-primary { background: #3b82f6; color: white; border: 2px solid #3b82f6; }
+    .btn-primary:hover { background: #2563eb; transform: translateY(-4px); box-shadow: 0 10px 25px rgba(59,130,246,0.35); }
+    .btn-outline { background: transparent; color: white; border: 2px solid white; }
+    .btn-outline:hover { background: white; color: #1e40af; }
+
+    footer { background: #0f172a; color: #cbd5e1; padding: 6rem 5% 3rem; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 3.5rem; max-width: 1400px; margin: 0 auto; }
+    .footer-column h4 { color: white; font-size: 1.4rem; margin-bottom: 1.6rem; }
+    .footer-column a { color: #94a3b8; text-decoration: none; display: block; line-height: 2.2; }
+    .footer-column a:hover { color: #60a5fa; }
+    .social-icons { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1rem; }
+    .social-icons a { background: #1e293b; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #e2e8f0; font-size: 1.6rem; transition: all 0.3s ease; }
+    .social-icons a:hover { background: #3b82f6; color: white; transform: translateY(-5px); box-shadow: 0 10px 25px rgba(59,130,246,0.4); }
+    .footer-bottom { text-align: center; margin-top: 5rem; padding-top: 2.5rem; border-top: 1px solid #334155; font-size: 0.98rem; color: #64748b; }
+
+    @media (max-width: 900px) { 
+      .header-inner { flex-direction: column; text-align: center; } 
+      nav ul { gap: 1.2rem; } 
+      .platforms { flex-direction: column; } 
+    }
+    @media (max-width: 600px) { 
+      .hero { padding: 9rem 5% 6rem; } 
+      .schedule-grid { grid-template-columns: 1fr; } 
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">King Jesus Ministry Kenya</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="live-streaming.html" class="active">Live Streaming</a></li>
+        <li><a href="donations.html">Donations</a></li>
+        <li><a href="prayer.html">Prayer</a></li>
+        <li><a href="announcements.html">Announcements</a></li>
+        <li><a href="sermon.html">Last Sunday Sermon</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="live-indicator"><i class="fas fa-circle" style="font-size:0.9rem; margin-right:0.6rem;"></i> KING JESUS TV LIVE</div>
+      <h1>King Jesus TV</h1>
+      <p class="subtitle">Anointed worship, powerful Word, miracles & encounters streaming live from Makhonge – join the move of God!</p>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <div class="platforms">
+      <button class="platform-btn active" data-platform="youtube">YouTube Live</button>
+      <button class="platform-btn" data-platform="facebook">Facebook Live</button>
+      <button class="platform-btn" data-platform="tiktok">TikTok Live</button>
+    </div>
+
+    <!-- Empty containers – nothing visible until button clicked -->
+    <div id="youtube" class="tab-content active"></div>
+    <div id="facebook" class="tab-content"></div>
+    <div id="tiktok" class="tab-content"></div>
+
+    <p style="margin-top:3rem; font-size:1.3rem; color:#94a3b8; text-align:center;">
+      <i class="fas fa-info-circle" style="color:#60a5fa; margin-right:0.6rem;"></i>
+      Select a platform above to check for live streams or visit our YouTube for archived services.
+    </p>
+  </section>
+
+  <section class="schedule">
+    <h2>Service Schedule – King Jesus TV</h2>
+    <div class="schedule-grid">
+      <div class="schedule-item">
+        <div class="schedule-icon"><i class="fas fa-church"></i></div>
+        <h3>Sunday Worship Explosion</h3>
+        <p>9:00 AM EAT</p>
+        <p>Live praise, Word & miracles</p>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-icon"><i class="fas fa-book-bible"></i></div>
+        <h3>Wednesday Fire Prayer</h3>
+        <p>6:00 PM EAT</p>
+        <p>Intense teaching & intercession</p>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-icon"><i class="fas fa-fire"></i></div>
+        <h3>Special Revival Nights</h3>
+        <p>Announced Weekly</p>
+        <p>Healing, deliverance & outpouring</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Be Part of the Move!</h2>
+    <p>Turn on notifications across platforms – never miss a live encounter with King Jesus.</p>
+    <div class="cta-buttons">
+      <a href="https://www.youtube.com/@charlesmwanda2212" target="_blank" class="btn btn-outline">Subscribe YouTube</a>
+      <a href="https://web.facebook.com/mwakosi" target="_blank" class="btn btn-outline">Like on Facebook</a>
+      <a href="https://wa.me/254791085514" target="_blank" class="btn btn-primary">Message on WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-column">
+      <div class="logo" style="color:white; margin-bottom:1.2rem; font-size:2.1rem;">King Jesus Ministry Kenya</div>
+      <p>Exalting King Jesus • Transforming Lives • Makhonge, Kenya</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="live-streaming.html">Live Streaming</a>
+      <a href="donations.html">Donations</a>
+      <a href="prayer.html">Prayer</a>
+      <a href="announcements.html">Announcements</a>
+      <a href="sermon.html">Last Sunday Sermon</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p><strong>Makhonge</strong></p>
+      <p>Call/WhatsApp: <strong>0757880743</strong></p>
+      <p>WhatsApp (alternative): <strong>0791085514</strong></p>
+      <p>info@kingjesusministrykenya.org</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/mwakosi" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@charlesmwanda2212" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/254791085514" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 King Jesus Ministry Kenya. All rights reserved.</p>
+    <p><small>Made with faith and love • <a href="#">Privacy Policy</a> • <a href="#">Terms</a></small></p>
+  </div>
+</footer>
+
+<script>
+// Tab switching + alert on every platform click
+document.querySelectorAll('.platform-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Visual tab switch
+    document.querySelectorAll('.platform-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+    document.getElementById(btn.dataset.platform).classList.add('active');
+
+    // Show message only when button is clicked
+    alert(
+      "There is no live stream active right now.\n\n" +
+      "You can watch previous services, sermons, and powerful encounters on our YouTube channel:\n" +
+      "@charlesmwanda2212 → https://www.youtube.com/@charlesmwanda2212"
+    );
+  });
+});
+</script>
+
+</body>
+</html>

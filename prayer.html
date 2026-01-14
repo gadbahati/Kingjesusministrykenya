@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Submit your prayer request or join live prayer at King Jesus Ministry Kenya – We stand with you in faith."/>
+  <title>Prayer Requests – King Jesus Ministry Kenya</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; color: #1f2937; background: #f9fafb; }
+
+    header { background: #0f172a; color: white; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 14px rgba(0,0,0,0.12); padding: 1rem 5%; }
+    .header-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .logo { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 2.4rem); font-weight: 700; color: #60a5fa; }
+    nav ul { display: flex; list-style: none; gap: 1.8rem; flex-wrap: wrap; justify-content: center; margin: 0; }
+    nav a { color: #cbd5e1; text-decoration: none; font-weight: 500; font-size: clamp(0.95rem, 3vw, 1.08rem); transition: color 0.3s ease; }
+    nav a:hover, nav a.active { color: #60a5fa; }
+
+    .hero { 
+      background: linear-gradient(rgba(30, 58, 138, 0.68), rgba(30, 58, 138, 0.68)), 
+                  url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80') center/cover no-repeat fixed; 
+      color: white; text-align: center; padding: clamp(8rem, 20vw, 12rem) 5% 7rem; 
+    }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 8vw, 4.8rem); margin-bottom: 1.2rem; }
+    .hero .subtitle { font-size: clamp(1.3rem, 4vw, 1.6rem); max-width: 800px; margin: 0 auto 2.5rem; }
+
+    .section { padding: clamp(5rem, 12vw, 8rem) 5%; max-width: 1400px; margin: 0 auto; }
+    h2 { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 6vw, 3.4rem); text-align: center; color: #1e3a8a; margin-bottom: 3rem; }
+
+    form { max-width: 700px; margin: 3rem auto; background: white; padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2.5rem); border-radius: 16px; box-shadow: 0 10px 35px rgba(0,0,0,0.08); }
+    label { display: block; margin: 1.5rem 0 0.5rem; font-weight: 600; color: #1e3a8a; }
+    input, textarea { width: 100%; padding: 1rem; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1.1rem; resize: vertical; min-height: 120px; }
+    textarea { min-height: 180px; }
+
+    .submit-btn { 
+      width: 100%; margin-top: 2.5rem; padding: 1.2rem; background: #25D366; color: white; border: none; 
+      border-radius: 50px; font-size: 1.2rem; font-weight: 600; cursor: pointer; transition: all 0.3s; 
+      display: flex; align-items: center; justify-content: center; gap: 0.8rem;
+    }
+    .submit-btn:hover { background: #128C7E; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(37,211,102,0.35); }
+
+    .verse { text-align: center; font-style: italic; color: #4b5563; margin: 2.5rem 0; font-size: 1.15rem; }
+    .verse cite { display: block; margin-top: 0.8rem; font-weight: 600; color: #1e3a8a; }
+
+    .cta { background: #1e3a8a; color: white; text-align: center; padding: clamp(6rem, 15vw, 9rem) 5%; }
+    .cta-buttons { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2.5rem; }
+    .btn { display: inline-block; padding: clamp(0.9rem, 3vw, 1.15rem) clamp(1.8rem, 5vw, 2.6rem); border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; font-size: clamp(1rem, 3vw, 1.15rem); cursor: pointer; border: none; }
+    .btn-primary { background: #3b82f6; color: white; border: 2px solid #3b82f6; }
+    .btn-primary:hover { background: #2563eb; transform: translateY(-4px); box-shadow: 0 10px 25px rgba(59,130,246,0.35); }
+    .btn-outline { background: transparent; color: white; border: 2px solid white; }
+    .btn-outline:hover { background: white; color: #1e40af; }
+
+    /* Modal */
+    .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background: rgba(0,0,0,0.6); }
+    .modal-content { background: white; margin: 15% auto; padding: clamp(2rem, 5vw, 2.5rem); border-radius: 16px; width: 90%; max-width: 500px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); position: relative; }
+    .close { position: absolute; right: 1.5rem; top: 1rem; color: #aaa; font-size: 2.2rem; font-weight: bold; cursor: pointer; }
+    .close:hover { color: #000; }
+    .modal h3 { color: #1e3a8a; margin-bottom: 1.8rem; text-align: center; }
+    .modal p { font-size: 1.15rem; margin: 1.2rem 0; text-align: center; }
+    .modal a { color: #3b82f6; font-weight: 600; text-decoration: none; font-size: 1.3rem; }
+    .modal a.whatsapp { color: #25D366; }
+
+    footer { background: #0f172a; color: #cbd5e1; padding: 6rem 5% 3rem; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 3.5rem; max-width: 1400px; margin: 0 auto; }
+    .footer-column h4 { color: white; font-size: 1.4rem; margin-bottom: 1.6rem; }
+    .footer-column a { color: #94a3b8; text-decoration: none; display: block; line-height: 2.2; }
+    .footer-column a:hover { color: #60a5fa; }
+    .social-icons { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1rem; }
+    .social-icons a { background: #1e293b; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #e2e8f0; font-size: 1.6rem; transition: all 0.3s ease; }
+    .social-icons a:hover { background: #3b82f6; color: white; transform: translateY(-5px); box-shadow: 0 10px 25px rgba(59,130,246,0.4); }
+    .footer-bottom { text-align: center; margin-top: 5rem; padding-top: 2.5rem; border-top: 1px solid #334155; font-size: 0.98rem; color: #64748b; }
+
+    @media (max-width: 900px) { 
+      .header-inner { flex-direction: column; text-align: center; } 
+      nav ul { gap: 1.2rem; } 
+    }
+    @media (max-width: 600px) { 
+      .hero { padding: 7rem 5% 5rem; } 
+      .modal-content { margin: 20% auto; padding: 1.8rem; }
+      form { padding: 2rem 1.5rem; }
+      .cta-buttons { flex-direction: column; gap: 1.2rem; }
+      .submit-btn { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">King Jesus Ministry Kenya</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="live-streaming.html">Live Streaming</a></li>
+        <li><a href="donations.html">Donations</a></li>
+        <li><a href="prayer.html" class="active">Prayer</a></li>
+        <li><a href="announcements.html">Announcements</a></li>
+        <li><a href="sermon.html">Last Sunday Sermon</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bring Your Request to the Throne</h1>
+      <p class="subtitle">We believe in the power of prayer. Submit your request – our team and intercessors will stand with you before King Jesus.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Submit Your Prayer Request</h2>
+
+    <form id="prayerForm">
+      <label for="name">Your Name (optional)</label>
+      <input type="text" id="name" placeholder="e.g. Jane Doe" />
+
+      <label for="phone">Phone Number (optional – for follow-up)</label>
+      <input type="tel" id="phone" placeholder="+254 7XX XXX XXX" />
+
+      <label for="email">Email (optional – for updates)</label>
+      <input type="email" id="email" placeholder="your@email.com" />
+
+      <label for="request">Prayer Request <span style="color:#ef4444;">*</span></label>
+      <textarea id="request" placeholder="Share what you're believing God for..." required></textarea>
+
+      <button type="submit" class="submit-btn">
+        <i class="fab fa-whatsapp"></i> Send via WhatsApp
+      </button>
+    </form>
+
+    <p class="verse">
+      "Call to me and I will answer you and tell you great and unsearchable things you do not know."<br>
+      <cite>Jeremiah 33:3</cite>
+    </p>
+  </section>
+
+  <section class="cta">
+    <h2>We Are Praying With You</h2>
+    <p>Your request matters. Trust that King Jesus hears and answers according to His perfect will.</p>
+    <div class="cta-buttons">
+      <button id="joinLivePrayer" class="btn btn-primary">
+        <i class="fas fa-video" style="margin-right:0.6rem;"></i> Join Live Prayer
+      </button>
+      <button class="btn btn-outline" onclick="document.getElementById('contactModal').style.display='block'">
+        <i class="fas fa-phone-alt" style="margin-right:0.6rem;"></i> Other Ways to Connect
+      </button>
+    </div>
+    <p style="margin-top:1.8rem; font-size:1.05rem; opacity:0.9;">
+      Live online prayer is available **Saturdays only, 11:00 AM – 4:00 PM Nairobi time (EAT)**.<br>
+      If no online session is active, join us physically at the church in Makhonge every **Wednesday from 8:00 AM** for corporate prayer.
+    </p>
+  </section>
+</main>
+
+<!-- Modal for Other Ways to Connect -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('contactModal').style.display='none'">×</span>
+    <h3>Other Ways to Connect</h3>
+    <p><strong>Call/WhatsApp us:</strong><br>
+      <a href="tel:+254757880743" style="font-size:1.4rem;">0757880743</a>
+    </p>
+    <p><strong>WhatsApp (alternative):</strong><br>
+      <a href="https://wa.me/254791085514" target="_blank" class="whatsapp" style="font-size:1.4rem;">
+        0791085514
+      </a>
+    </p>
+    <p style="margin-top:2rem; font-size:1.05rem;">
+      For prayer requests: Use the form above to send via WhatsApp.<br>
+      For live sessions: Saturdays 11 AM – 4 PM EAT (see button above).<br>
+      Physical prayer: Wednesdays 8:00 AM at the church in Makhonge.
+    </p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-column">
+      <div class="logo" style="color:white; margin-bottom:1.2rem; font-size:2.1rem;">King Jesus Ministry Kenya</div>
+      <p>Exalting King Jesus • Transforming Lives • Makhonge, Kenya</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="live-streaming.html">Live Streaming</a>
+      <a href="donations.html">Donations</a>
+      <a href="prayer.html">Prayer</a>
+      <a href="announcements.html">Announcements</a>
+      <a href="sermon.html">Last Sunday Sermon</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p><strong>Makhonge</strong></p>
+      <p>Call/WhatsApp: <strong>0757880743</strong></p>
+      <p>WhatsApp (alternative): <strong>0791085514</strong></p>
+      <p>info@kingjesusministrykenya.org</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/mwakosi" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@charlesmwanda2212" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/254791085514" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 King Jesus Ministry Kenya. All rights reserved.</p>
+    <p><small>Made with faith and love • <a href="#">Privacy Policy</a> • <a href="#">Terms</a></small></p>
+  </div>
+</footer>
+
+<script>
+// WhatsApp prayer request submission
+document.getElementById('prayerForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const request = document.getElementById('request').value.trim();
+
+  if (!request) {
+    alert('Please enter your prayer request.');
+    return;
+  }
+
+  let message = "Prayer Request from King Jesus Ministry Website\n\n";
+  if (name) message += `Name: ${name}\n`;
+  if (phone) message += `Phone: ${phone}\n`;
+  if (email) message += `Email: ${email}\n`;
+  message += `\nRequest:\n${request}`;
+
+  const whatsappNumber = "254791085514";
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+  window.open(whatsappUrl, '_blank');
+});
+
+// Live Prayer join logic (Saturdays 11:00–16:00 EAT)
+document.getElementById('joinLivePrayer').addEventListener('click', function() {
+  const now = new Date();
+  // Convert to EAT (UTC+3)
+  const eatOffset = 3 * 60; // minutes
+  const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+  const eatDate = new Date(utc + (eatOffset * 60000));
+
+  const day = eatDate.getDay();           // 0 = Sunday, 6 = Saturday
+  const hours = eatDate.getHours();
+  const minutes = eatDate.getMinutes();
+
+  const isSaturday = day === 6;
+  const isInTime = (hours >= 11 && hours < 16) || (hours === 16 && minutes === 0);
+
+  if (isSaturday && isInTime) {
+    // Opens the real Google Meet link
+    window.open('https://meet.google.com/dfq-afyo-kcd', '_blank');
+  } else {
+    alert(
+      "Live online prayer is available only on Saturdays from 11:00 AM to 4:00 PM Nairobi time (EAT).\n\n" +
+      "Please come back on Saturday at 11 AM.\n\n" +
+      "In the meantime, you can submit a prayer request above, or join us physically every Wednesday at 8:00 AM in Makhonge."
+    );
+  }
+});
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById('contactModal');
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

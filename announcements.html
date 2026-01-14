@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Latest announcements, events, and news from King Jesus Ministry Kenya in Makhonge – including our powerful upcoming summit January 26–31, 2026."/>
+  <title>Announcements – King Jesus Ministry Kenya</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; color: #1f2937; background: #f9fafb; }
+
+    header { background: #0f172a; color: white; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 14px rgba(0,0,0,0.12); padding: 1rem 5%; }
+    .header-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .logo { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 2.4rem); font-weight: 700; color: #60a5fa; }
+    nav ul { display: flex; list-style: none; gap: 1.8rem; flex-wrap: wrap; justify-content: center; margin: 0; }
+    nav a { color: #cbd5e1; text-decoration: none; font-weight: 500; font-size: clamp(0.95rem, 3vw, 1.08rem); transition: color 0.3s ease; }
+    nav a:hover, nav a.active { color: #60a5fa; }
+
+    .hero { 
+      background: linear-gradient(rgba(30, 58, 138, 0.65), rgba(30, 58, 138, 0.65)), 
+                  url('https://thumbs.dreamstime.com/b/group-faithful-pious-hands-raised-their-hands-to-worship-god-background-sunset-raise-your-hands-worship-god-103167150.jpg') center/cover no-repeat fixed; 
+      color: white; text-align: center; padding: clamp(8rem, 20vw, 12rem) 5% 7rem; 
+    }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 8vw, 4.8rem); margin-bottom: 1.2rem; }
+    .hero .subtitle { font-size: clamp(1.3rem, 4vw, 1.6rem); max-width: 800px; margin: 0 auto 2.5rem; }
+
+    .section { padding: clamp(5rem, 12vw, 8rem) 5%; max-width: 1400px; margin: 0 auto; }
+    h2 { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 6vw, 3.4rem); text-align: center; color: #1e3a8a; margin-bottom: 3rem; }
+
+    .featured-summit { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.12); margin-bottom: 4rem; transition: all 0.3s ease; }
+    .featured-summit:hover { transform: scale(1.02); }
+    .summit-poster { width: 100%; height: auto; display: block; }
+    .summit-header { background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; padding: 2.5rem; text-align: center; }
+    .summit-header h3 { font-size: 2.2rem; margin-bottom: 0.8rem; }
+    .summit-header .date { font-size: 1.5rem; font-weight: 700; }
+    .summit-body { padding: 2.5rem; text-align: center; }
+    .summit-body p { font-size: 1.25rem; color: #1e293b; margin-bottom: 2rem; font-weight: 500; }
+    .summit-btn { display: inline-block; padding: 1.2rem 3rem; background: #ef4444; color: white; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.3rem; transition: all 0.3s; }
+    .summit-btn:hover { background: #dc2626; transform: translateY(-4px); box-shadow: 0 12px 30px rgba(239,68,68,0.4); }
+
+    .announcements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem; }
+    .announcement-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s ease; }
+    .announcement-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+    .card-header { background: #1e40af; color: white; padding: 1.6rem; font-size: 1.4rem; font-weight: 600; text-align: center; }
+    .card-body { padding: 2rem; text-align: center; }
+    .card-date { font-size: 1.1rem; color: #3b82f6; margin-bottom: 1rem; font-weight: 600; }
+    .card-body p { font-size: 1.15rem; color: #4b5563; margin-bottom: 1.5rem; }
+    .card-btn { display: inline-block; padding: 0.9rem 2rem; background: #3b82f6; color: white; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+    .card-btn:hover { background: #2563eb; transform: translateY(-3px); }
+
+    .cta { background: #1e3a8a; color: white; text-align: center; padding: clamp(6rem, 15vw, 9rem) 5%; }
+    .cta-buttons { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2.5rem; }
+    .btn { display: inline-block; padding: clamp(0.9rem, 3vw, 1.15rem) clamp(1.8rem, 5vw, 2.6rem); border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; font-size: clamp(1rem, 3vw, 1.15rem); }
+    .btn-primary { background: #3b82f6; color: white; border: 2px solid #3b82f6; }
+    .btn-primary:hover { background: #2563eb; transform: translateY(-4px); box-shadow: 0 10px 25px rgba(59,130,246,0.35); }
+    .btn-outline { background: transparent; color: white; border: 2px solid white; }
+    .btn-outline:hover { background: white; color: #1e40af; }
+
+    footer { background: #0f172a; color: #cbd5e1; padding: 6rem 5% 3rem; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 3.5rem; max-width: 1400px; margin: 0 auto; }
+    .footer-column h4 { color: white; font-size: 1.4rem; margin-bottom: 1.6rem; }
+    .footer-column a { color: #94a3b8; text-decoration: none; display: block; line-height: 2.2; }
+    .footer-column a:hover { color: #60a5fa; }
+    .social-icons { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1rem; }
+    .social-icons a { background: #1e293b; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #e2e8f0; font-size: 1.6rem; transition: all 0.3s ease; }
+    .social-icons a:hover { background: #3b82f6; color: white; transform: translateY(-5px); box-shadow: 0 10px 25px rgba(59,130,246,0.4); }
+    .footer-bottom { text-align: center; margin-top: 5rem; padding-top: 2.5rem; border-top: 1px solid #334155; font-size: 0.98rem; color: #64748b; }
+
+    @media (max-width: 900px) { .header-inner { flex-direction: column; text-align: center; } nav ul { gap: 1.2rem; } }
+    @media (max-width: 600px) { .hero { padding: 7rem 5% 5rem; } .announcements-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">King Jesus Ministry Kenya</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="live-streaming.html">Live Streaming</a></li>
+        <li><a href="donations.html">Donations</a></li>
+        <li><a href="prayer.html">Prayer</a></li>
+        <li><a href="announcements.html" class="active">Announcements</a></li>
+        <li><a href="sermon.html">Last Sunday Sermon</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Latest Announcements & Events</h1>
+      <p class="subtitle">God is doing great things at King Jesus Ministry Kenya. Stay informed and be part of the move!</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Featured Event</h2>
+    <div class="featured-summit">
+      <!-- Summit Poster Placeholder – replace src with your actual poster image -->
+      <img src="pic1.png" 
+           alt="Powerful Kingdom Summit  – January 26–31, 2026" class="summit-poster">
+
+      <div class="summit-header">
+        <h3>POWERFUL KINGDOM SUMMIT</h3>
+        <div class="date">January 26 – 31, 2026</div>
+      </div>
+      <div class="summit-body">
+        <p>This will be a **very powerful summit** — a life-transforming time of deep worship, anointed teaching, healing, deliverance, and fresh revelation from the throne of King Jesus. You should be there and attend in person!</p>
+        <p>We will learn a lot — expect breakthroughs, impartation, and encounters that will shift your destiny. Don't miss this divine appointment!</p>
+        <a href="contact.html" class="summit-btn">I'm Coming – Get More Info</a>
+      </div>
+    </div>
+
+    <h2>Other Announcements</h2>
+    <div class="announcements-grid">
+
+      <div class="announcement-card">
+        <div class="card-header">Corporate Prayer Every Wednesday</div>
+        <div class="card-body">
+          <div class="card-date"><i class="fas fa-calendar-alt" style="margin-right:0.5rem;"></i> Wednesdays – 8:00 AM</div>
+          <p>Powerful time of intercession at the church in Makhonge. Join physically or check for live stream.</p>
+          <a href="prayer.html" class="card-btn">Prepare Your Heart</a>
+        </div>
+      </div>
+
+      <div class="announcement-card">
+        <div class="card-header">Youth & Young Adults Gathering</div>
+        <div class="card-body">
+          <div class="card-date"><i class="fas fa-calendar-alt" style="margin-right:0.5rem;"></i> Saturday, January 18, 2026 – 4:00 PM</div>
+          <p>Fun fellowship, Word, and connection. Bring friends and come expectant!</p>
+          <a href="contact.html" class="card-btn">RSVP</a>
+        </div>
+      </div>
+
+      <div class="announcement-card">
+        <div class="card-header">Baptism Preparation Classes</div>
+        <div class="card-body">
+          <div class="card-date"><i class="fas fa-calendar-alt" style="margin-right:0.5rem;"></i> Starting February 2026</div>
+          <p>Get ready for water baptism. Classes after Sunday service – sign up now.</p>
+          <a href="contact.html" class="card-btn">Sign Up</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Don't Miss What God Is Doing</h2>
+    <p>Follow us for real-time updates on the summit and all upcoming events.</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/254791085514" target="_blank" class="btn btn-primary">
+        <i class="fab fa-whatsapp" style="margin-right:0.6rem;"></i> Join WhatsApp Updates
+      </a>
+      <a href="contact.html" class="btn btn-outline">Contact Us</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-column">
+      <div class="logo" style="color:white; margin-bottom:1.2rem; font-size:2.1rem;">King Jesus Ministry Kenya</div>
+      <p>Exalting King Jesus • Transforming Lives • Makhonge, Kenya</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="live-streaming.html">Live Streaming</a>
+      <a href="donations.html">Donations</a>
+      <a href="prayer.html">Prayer</a>
+      <a href="announcements.html">Announcements</a>
+      <a href="sermon.html">Last Sunday Sermon</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p><strong>Makhonge</strong></p>
+      <p>Call/WhatsApp: <strong>0757880743</strong></p>
+      <p>WhatsApp (alternative): <strong>0791085514</strong></p>
+      <p>info@kingjesusministrykenya.org</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/mwakosi" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@charlesmwanda2212" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/254791085514" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 King Jesus Ministry Kenya. All rights reserved.</p>
+    <p><small>Made with faith and love • <a href="#">Privacy Policy</a> • <a href="#">Terms</a></small></p>
+  </div>
+</footer>
+
+</body>
+</html>
